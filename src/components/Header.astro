@@ -1,5 +1,5 @@
 ---
-
+import HeaderButton from "./HeaderButton.astro";
 ---
 
 <header class="py-8 px-4 mx-auto max-w-xl">
@@ -10,9 +10,67 @@
     </p>
   </div>
   <nav
-    class="flex flex-col items-center justify-between text-center md:flex-row"
+    class="flex flex-col items-center justify-between text-center md:flex-
+    row"
   >
-    <a class="text-white" href="/">Últimos lanzamientos</a>
-    <a class="text-white" href="/oldest">Los más viejos</a>
+    <HeaderButton class="text-white" href="/">
+      <svg
+        slot="before"
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-info-circle"
+        width="44"
+        height="44"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#ffffff"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+        <path d="M12 9h.01"></path>
+        <path d="M11 12h1v4h1"></path>
+      </svg>Últimos lanzamientos</HeaderButton
+    >
+    <HeaderButton class="text-white" href="/oldest">
+      <svg
+        slot="before"
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-arrow-badge-left"
+        width="44"
+        height="44"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#ffffff"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M11 17h6l-4 -5l4 -5h-6l-4 5z"></path>
+      </svg>Los más viejos</HeaderButton
+    >
+    <HeaderButton class="text-white" href="/about">
+      <svg
+        slot="before"
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-users"
+        width="44"
+        height="44"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#ffffff"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+        <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+      </svg>About us</HeaderButton
+    >
   </nav>
 </header>
